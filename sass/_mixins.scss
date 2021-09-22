@@ -1,5 +1,10 @@
 @mixin flex($jc: flex-start, $ai: flex-start) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin fdir($fd: row) {
+  display: flex;
+  flex-direction: $fd;
 }

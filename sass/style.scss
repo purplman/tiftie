@@ -6,9 +6,15 @@
 @import "spacings";
 @import "layout";
 @import "responsive";
+
+// components
 @import "components/buttons";
 @import "components/elements";
 @import "components/header";
 @import "components/footer";
 @import "components/form";
 @import "components/tabs";
+
+// pages
+@import "pages/account";
+@import "pages/contact";

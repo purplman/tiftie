@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 body,
-.btn {
+input,
+textarea,
+button {
   font-family: "Poppins", sans-serif;
 }
 
@@ -10,9 +12,12 @@ body,
   font-size: 3rem;
 }
 
-.dot {
+.mark {
   color: #ff5e3a;
   display: inline-block;
+}
+
+.mark__dot {
   margin-left: -0.5rem;
 }
 
@@ -38,7 +43,7 @@ a {
   transition: 0.2s ease-in-out;
 }
 
-a:visited, a:hover {
+a:hover {
   color: #ff5e3a;
 }
 
@@ -591,6 +596,8 @@ img {
           align-items: center;
   pointer-events: none;
   z-index: 2;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
 }
 
 .cursor::after {
@@ -629,7 +636,7 @@ img {
   font-weight: 700;
 }
 
-.brand .dot {
+.brand .mark__dot {
   margin: 0;
 }
 
@@ -758,6 +765,25 @@ nav a:hover {
   z-index: 2;
 }
 
+.form__text {
+  margin-bottom: 2rem;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.form__row .form__box {
+  width: 100%;
+}
+
+.form__row .form__box:not(:last-child) {
+  margin-right: 2rem;
+}
+
 .form__box {
   margin-bottom: 2rem;
 }
@@ -785,20 +811,21 @@ nav a:hover {
   color: #ff5e3a;
 }
 
-.form__input {
+.form__input, .form__textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
+  background: #f5f5f5;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   outline: none;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
 }
 
-.form__input:focus, .form__input:active {
+.form__input:focus, .form__input:active, .form__textarea:focus, .form__textarea:active {
   border-color: #ff5e3a;
 }
 
@@ -844,4 +871,83 @@ nav a:hover {
 .tabs .tab--active {
   border-bottom-color: #ff5e3a;
   font-weight: 600;
+}
+
+.account__sidebar, .account__main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.account__sidebar {
+  width: 300px;
+  margin-right: 100px;
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.account__main {
+  width: 100%;
+}
+
+.account__avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.account__user {
+  text-align: center;
+  color: #ff5e3a;
+}
+
+.account__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.account__nav li {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.account__nav li .account__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.75rem 0;
+}
+
+.account__nav li .account__link span {
+  margin-right: 1rem;
+  width: 1rem;
+  width: 1rem;
+  text-align: center;
+}
+
+.account__nav li .account__link:hover, .account__nav li .account__link--active {
+  color: #ff5e3a;
+}
+
+.contact__left {
+  width: 60%;
+  margin-right: 5%;
+}
+
+.contact__left, .contact__right {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contact__right {
+  width: 35%;
 }

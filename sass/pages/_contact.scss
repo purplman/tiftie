@@ -1,0 +1,16 @@
+.contact {
+  &__left {
+    width: 60%;
+    margin-right: 5%;
+  }
+
+  &__left,
+  &__right {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__right {
+    width: 35%;
+  }
+}
