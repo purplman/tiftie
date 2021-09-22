@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiftie</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="wrapper">
+      <div id="header"></div>
+      <main>
+        <div class="container">
+          <section id="auth">
+            <h1 class="title">
+              Account
+              <span class="dot">.</span>
+            </h1>
+
+            <div class="tabs">
+              <ul>
+                <li data-form="login" class="tab tab--active">Sign in</li>
+                <li data-form="register" class="tab">Sign up</li>
+              </ul>
+            </div>
+
+            <div id="form" class="form">
+              <div id="login" class="form__login form__auth form--active">
+                <form>
+                  <div class="form__box">
+                    <label class="form__label">
+                      E-mail <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="email" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Password <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="password" />
+                  </div>
+                  <div class="form__footer">
+                    <div class="form__footer-left">
+                      <div class="form__box">
+                        <input type="checkbox" />
+                        Remember me
+                      </div>
+                    </div>
+                    <div class="form__footer-right">
+                      <a href="">Lost your password?</a>
+                    </div>
+                  </div>
+                  <button class="btn btn--primary my-3">Sign in</button>
+                </form>
+              </div>
+              <div id="register" class="form__register form__auth">
+                <form>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Firstname <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="text" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Lastname <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="text" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Phone <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="text" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      E-mail <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="email" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Password <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="password" />
+                  </div>
+                  <div class="form__box">
+                    <label class="form__label">
+                      Confirm password <span class="required">*</span>
+                    </label>
+                    <input class="form__input" type="password" />
+                  </div>
+                  <div class="form__footer">
+                    <p>
+                      Your personal data will be used to support your experience
+                      throughout this website, to manage access to your account,
+                      and for other purposes described in our
+                      <a href="" class="link">privacy policy</a>.
+                    </p>
+                  </div>
+                  <button class="btn btn--primary my-3">Sign up</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <div id="footer"></div>
+    </div>
+  </body>
+
+  <!-- scripts -->
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/app.js"></script>
+</html>

@@ -1,0 +1,61 @@
+.form {
+  position: relative;
+
+  &__register,
+  &__login {
+    width: 100%;
+  }
+
+  &__register {
+    display: none;
+  }
+
+  &--active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__box {
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    @include flex($ai: center);
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    .required {
+      color: $primary;
+    }
+  }
+
+  &__input {
+    display: flex;
+    border: 2px solid $light;
+    width: 100%;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+    outline: none;
+    border-radius: 0.5rem;
+
+    &:focus,
+    &:active {
+      border-color: $primary;
+    }
+  }
+
+  &__footer {
+    @include flex(space-between, center);
+    .form__box {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

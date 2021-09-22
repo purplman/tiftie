@@ -1,0 +1,58 @@
+.header {
+  padding: 2rem 0;
+  @include flex(space-between, center);
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  .dot {
+    margin: 0;
+  }
+
+  a {
+    display: flex;
+    color: #000;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin: 0 2rem;
+  }
+  a {
+    line-height: 1rem;
+    font-weight: 500;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  margin-top: 5vh;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__text {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,41 @@
+.footer {
+  border-top: 1px solid $light;
+  margin-top: 5rem;
+  padding-top: 3rem;
+
+  &__row {
+    @include flex($jc: space-between);
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  &__column {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__socials {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    ul {
+      display: flex;
+    }
+
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid $light;
+    font-size: 0.9rem;
+    @include flex(space-between, center);
+  }
+}
