@@ -15,6 +15,22 @@
 
   &__main {
     width: 100%;
+    position: relative;
+  }
+
+  &__box {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+
+    &--active {
+      z-index: 2;
+      opacity: 1;
+    }
   }
 
   &__avatar {

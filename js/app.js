@@ -26,4 +26,16 @@ $(() => {
   $(".link").on("mouseleave", () => {
     $(".cursor").removeClass("cursor--focused");
   });
+
+  $(".account__link").on("click", (e) => {
+    e.preventDefault();
+
+    let box = $(e.target).data("box");
+
+    $(".account__link").removeClass("account__link--active");
+    $(e.target).addClass("account__link--active");
+
+    $(".account__box").removeClass("account__box--active");
+    $(`#${box}`).addClass("account__box--active");
+  });
 });

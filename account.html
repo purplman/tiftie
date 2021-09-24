@@ -31,7 +31,11 @@
                   <nav class="account__nav">
                     <ul>
                       <li>
-                        <a class="account__link account__link--active" href="">
+                        <a
+                          data-box="personal-information"
+                          class="account__link account__link--active"
+                          href=""
+                        >
                           <span>
                             <i class="fas fa-female"></i>
                           </span>
@@ -39,7 +43,11 @@
                         </a>
                       </li>
                       <li>
-                        <a class="account__link" href="">
+                        <a
+                          data-box="account-details"
+                          class="account__link"
+                          href=""
+                        >
                           <span>
                             <i class="fas fa-lock"></i>
                           </span>
@@ -47,7 +55,11 @@
                         </a>
                       </li>
                       <li>
-                        <a class="account__link" href="">
+                        <a
+                          data-box="order-history"
+                          class="account__link"
+                          href=""
+                        >
                           <span>
                             <i class="fas fa-history"></i>
                           </span>
@@ -55,7 +67,11 @@
                         </a>
                       </li>
                       <li>
-                        <a class="account__link" href="">
+                        <a
+                          data-box="reoccuring-services"
+                          class="account__link"
+                          href=""
+                        >
                           <span>
                             <i class="fas fa-redo"></i>
                           </span>
@@ -63,7 +79,7 @@
                         </a>
                       </li>
                       <li>
-                        <a class="account__link" href="">
+                        <a data-box="payments" class="account__link" href="">
                           <span>
                             <i class="fas fa-credit-card"></i>
                           </span>
@@ -89,27 +105,87 @@
                 </div>
               </aside>
               <div class="account__main">
-                <form>
-                  <div class="form__box">
-                    <label class="form__label">
-                      Firstname <span class="required">*</span>
-                    </label>
-                    <input class="form__input" type="text" />
+                <!-- Personal information box -->
+                <div id="personal-information" class="account__box">
+                  <form>
+                    <div class="form__box">
+                      <label class="form__label">
+                        Firstname <span class="required">*</span>
+                      </label>
+                      <input value="Sevda" class="form__input" type="text" />
+                    </div>
+                    <div class="form__box">
+                      <label class="form__label">
+                        Lastname <span class="required">*</span>
+                      </label>
+                      <input
+                        value="Ahmadzada"
+                        class="form__input"
+                        type="text"
+                      />
+                    </div>
+                    <div class="form__box">
+                      <label class="form__label">
+                        Phone <span class="required">*</span>
+                      </label>
+                      <input
+                        value="+994504622001"
+                        class="form__input"
+                        type="text"
+                      />
+                    </div>
+                    <button class="btn btn--primary my-3">Update</button>
+                  </form>
+                </div>
+                <!-- Account details box -->
+                <div
+                  id="account-details"
+                  class="account__box account__box--active"
+                >
+                  <form>
+                    <div class="form__box">
+                      <label class="form__label">
+                        E-mail <span class="required">*</span>
+                      </label>
+                      <input class="form__input" type="email" />
+                    </div>
+                    <button class="btn btn--primary">Update</button>
+                    <div class="divider"></div>
+                    <div class="form__box">
+                      <p>
+                        <a href="">Request account deletion</a>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+                <!-- Order history box -->
+                <div id="order-history" class="account__box">
+                  <!-- Here goes order list -->
+
+                  <!-- Empty box -->
+                  <div class="empty-box">Your order history is empty</div>
+                </div>
+
+                <!-- Reoccuring services box -->
+                <div id="reoccuring-services" class="account__box">
+                  <!-- Here goes order list -->
+
+                  <!-- Empty box -->
+                  <div class="empty-box">
+                    You don't have reoccuring services
                   </div>
-                  <div class="form__box">
-                    <label class="form__label">
-                      Lastname <span class="required">*</span>
-                    </label>
-                    <input class="form__input" type="text" />
+                </div>
+
+                <!-- Payments box -->
+                <div id="payments" class="account__box">
+                  <!-- Here goes payment methods list -->
+
+                  <!-- Empty box -->
+                  <div class="empty-box">
+                    You don't have a payment method setup.
+                    <a class="btn btn--primary mt-3">Add a card</a>
                   </div>
-                  <div class="form__box">
-                    <label class="form__label">
-                      Phone <span class="required">*</span>
-                    </label>
-                    <input class="form__input" type="text" />
-                  </div>
-                  <button class="btn btn--primary my-3">Update</button>
-                </form>
+                </div>
               </div>
             </div>
           </section>
