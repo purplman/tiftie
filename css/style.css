@@ -74,7 +74,7 @@ img {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #000;
+  background: #ff5e3a;
 }
 
 .m-0 {
@@ -693,6 +693,43 @@ nav a {
 
 nav a:hover {
   color: #ff5e3a;
+}
+
+.menu__list li {
+  position: relative;
+}
+
+.menu__list li:hover .dropdown__list {
+  top: 100%;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.dropdown__list {
+  width: 200px;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f5f5f5;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.dropdown__list li {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dropdown__list li a {
+  display: block;
+  padding: 1rem;
 }
 
 .hero {

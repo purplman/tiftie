@@ -39,6 +39,43 @@ nav {
   }
 }
 
+.menu__list {
+  li {
+    position: relative;
+
+    &:hover {
+      .dropdown__list {
+        top: 100%;
+        opacity: 1;
+        pointer-events: unset;
+      }
+    }
+  }
+}
+
+.dropdown__list {
+  width: 200px;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  flex-direction: column;
+  background: $lighter;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+
+  li {
+    margin-right: 0;
+    margin-left: 0;
+
+    a {
+      display: block;
+      padding: 1rem;
+    }
+  }
+}
+
 .hero {
   text-align: center;
   margin-top: 5vh;
