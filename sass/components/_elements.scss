@@ -18,6 +18,7 @@
     border-radius: 50%;
     background: $primary;
     content: "";
+    transition: 0.15s ease-out;
   }
 
   &--focused::after {

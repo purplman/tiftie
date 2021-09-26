@@ -28,12 +28,12 @@ button {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: none;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  cursor: none;
 }
 
 a {
@@ -606,6 +606,8 @@ img {
   border-radius: 50%;
   background: #ff5e3a;
   content: "";
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
 }
 
 .cursor--focused::after {
@@ -933,6 +935,68 @@ nav a:hover {
 .tabs .tab--active {
   border-bottom-color: #ff5e3a;
   font-weight: 600;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  width: 100%;
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.card {
+  background: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.card__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+.card__title {
+  font-weight: 600;
+}
+
+.card__reviews {
+  color: #ff5e3a;
+}
+
+.card__reviews ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__reviews li:not(:last-child) {
+  margin-right: 0.5rem;
 }
 
 .account__sidebar, .account__main {

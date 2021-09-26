@@ -20,10 +20,10 @@ $(() => {
     $(`.form__${form}`).fadeIn("fast");
   });
 
-  $(".link").on("mouseover", () => {
+  $(document).on("mouseover", "a", () => {
     $(".cursor").addClass("cursor--focused");
   });
-  $(".link").on("mouseleave", () => {
+  $(document).on("mouseleave", "a", () => {
     $(".cursor").removeClass("cursor--focused");
   });
 

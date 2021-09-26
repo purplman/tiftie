@@ -1,0 +1,45 @@
+.cards {
+  display: grid;
+  grid-gap: 2rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.card {
+  background: $lighter;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__row {
+    @include flex(space-between, center);
+  }
+
+  &__image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2rem;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__reviews {
+    color: $primary;
+
+    ul {
+      display: flex;
+    }
+
+    li:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
