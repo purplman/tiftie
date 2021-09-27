@@ -9,10 +9,17 @@
   background: $lighter;
   border-radius: 0.5rem;
   padding: 1rem;
+  position: relative;
 
   &__left {
     display: flex;
     align-items: center;
+  }
+
+  &__btn {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   &__row {
@@ -23,8 +30,12 @@
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
-    overflow: hidden;
     margin-right: 2rem;
+    position: relative;
+
+    img {
+      border-radius: 50%;
+    }
   }
 
   &__title {

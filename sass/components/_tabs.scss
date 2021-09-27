@@ -8,7 +8,7 @@
     padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
 
-    &:first-child {
+    &:not(:last-child) {
       margin-right: 1rem;
     }
 

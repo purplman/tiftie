@@ -596,8 +596,6 @@ img {
           align-items: center;
   pointer-events: none;
   z-index: 5;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
 }
 
 .cursor::after {
@@ -928,7 +926,7 @@ nav a:hover {
   border-bottom: 2px solid transparent;
 }
 
-.tabs .tab:first-child {
+.tabs .tab:not(:last-child) {
   margin-right: 1rem;
 }
 
@@ -950,6 +948,7 @@ nav a:hover {
   background: #f5f5f5;
   border-radius: 0.5rem;
   padding: 1rem;
+  position: relative;
 }
 
 .card__left {
@@ -959,6 +958,12 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card__btn {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .card__row {
@@ -977,8 +982,12 @@ nav a:hover {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  overflow: hidden;
   margin-right: 2rem;
+  position: relative;
+}
+
+.card__image img {
+  border-radius: 50%;
 }
 
 .card__title {
