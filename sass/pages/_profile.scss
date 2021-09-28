@@ -1,0 +1,66 @@
+.profile {
+  padding: 1rem;
+  background: $lighter;
+  border-radius: 0.5rem;
+
+  &__top {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    // margin-bottom: 1rem;
+
+    &__left,
+    &__right {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    color: $primary;
+    font-weight: 600;
+  }
+
+  &__title {
+    color: #555;
+  }
+
+  &__avatar {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 11rem;
+    height: 11rem;
+  }
+
+  &__stats {
+    border-radius: 0.5rem;
+    background: $light;
+    padding: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+
+    ul {
+      @include flex($jc: center);
+    }
+
+    li {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    span {
+      display: block;
+      color: $primary;
+
+      &:first-child {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+      }
+      &:last-child {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
